@@ -1,0 +1,281 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           RISC-V
+  Version:                           0x1
+  Entry point address:               0x20400000
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          314240 (bytes into file)
+  Flags:                             0x1, RVC, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         6
+  Size of section headers:           40 (bytes)
+  Number of section headers:         23
+  Section header string table index: 22
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .boot             PROGBITS        20400000 001000 0000c0 00  AX  0   0 16
+  [ 2] .text             PROGBITS        204000c0 0010c0 003124 00  AX  0   0 16
+  [ 3] .data             PROGBITS        80000000 005000 000160 00  WA  0   0 16
+  [ 4] .sdata            PROGBITS        80000160 005160 000014 00  WA  0   0  4
+  [ 5] .bss              NOBITS          80000178 043178 00042c 00  WA  0   0  8
+  [ 6] .sbss             NOBITS          800005a8 043178 000008 00  WA  0   0  8
+  [ 7] .world1           PROGBITS        20410000 006000 0029ac 00  AX  0   0  1
+  [ 8] .world2           PROGBITS        20480000 009000 039490 00  AX  0   0  1
+  [ 9] .stack            PROGBITS        80003c00 042490 000400 00   W  0   0  1
+  [10] .riscv.attributes RISCV_ATTRIBUTES 00000000 042890 00002a 00      0   0  1
+  [11] .comment          PROGBITS        00000000 0428ba 00001b 01  MS  0   0  1
+  [12] .debug_line       PROGBITS        00000000 0428d5 002fdf 00      0   0  1
+  [13] .debug_line_str   PROGBITS        00000000 0458b4 000639 01  MS  0   0  1
+  [14] .debug_info       PROGBITS        00000000 045eed 003b61 00      0   0  1
+  [15] .debug_abbrev     PROGBITS        00000000 049a4e 000dad 00      0   0  1
+  [16] .debug_aranges    PROGBITS        00000000 04a800 0001c0 00      0   0  8
+  [17] .debug_str        PROGBITS        00000000 04a9c0 000741 01  MS  0   0  1
+  [18] .debug_frame      PROGBITS        00000000 04b104 00036c 00      0   0  4
+  [19] .debug_rnglists   PROGBITS        00000000 04b470 000028 00      0   0  1
+  [20] .symtab           SYMTAB          00000000 04b498 000c10 10     21 114  4
+  [21] .strtab           STRTAB          00000000 04c0a8 0009f7 00      0   0  1
+  [22] .shstrtab         STRTAB          00000000 04ca9f 0000de 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  RISCV_ATTRIBUT 0x042890 0x00000000 0x00000000 0x0002a 0x00000 R   0x1
+  LOAD           0x001000 0x20400000 0x20400000 0x031e4 0x031e4 R E 0x1000
+  LOAD           0x005000 0x80000000 0x204031e4 0x00174 0x00174 RW  0x1000
+  LOAD           0x006000 0x20410000 0x20410000 0x029ac 0x029ac R E 0x1000
+  LOAD           0x009000 0x20480000 0x20480000 0x39490 0x39490 R E 0x1000
+  LOAD           0x000178 0x80000178 0x80000178 0x00000 0x00438 RW  0x1000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .riscv.attributes 
+   01     .boot .text 
+   02     .data .sdata 
+   03     .world1 
+   04     .world2 
+   05     .bss .sbss 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+The decoding of unwind sections for machine type RISC-V is not currently supported.
+
+Symbol table '.symtab' contains 193 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 20400000     0 SECTION LOCAL  DEFAULT    1 .boot
+     2: 204000c0     0 SECTION LOCAL  DEFAULT    2 .text
+     3: 80000000     0 SECTION LOCAL  DEFAULT    3 .data
+     4: 80000160     0 SECTION LOCAL  DEFAULT    4 .sdata
+     5: 80000178     0 SECTION LOCAL  DEFAULT    5 .bss
+     6: 800005a8     0 SECTION LOCAL  DEFAULT    6 .sbss
+     7: 20410000     0 SECTION LOCAL  DEFAULT    7 .world1
+     8: 20480000     0 SECTION LOCAL  DEFAULT    8 .world2
+     9: 80003c00     0 SECTION LOCAL  DEFAULT    9 .stack
+    10: 00000000     0 SECTION LOCAL  DEFAULT   10 .riscv.attributes
+    11: 00000000     0 SECTION LOCAL  DEFAULT   11 .comment
+    12: 00000000     0 SECTION LOCAL  DEFAULT   12 .debug_line
+    13: 00000000     0 SECTION LOCAL  DEFAULT   13 .debug_line_str
+    14: 00000000     0 SECTION LOCAL  DEFAULT   14 .debug_info
+    15: 00000000     0 SECTION LOCAL  DEFAULT   15 .debug_abbrev
+    16: 00000000     0 SECTION LOCAL  DEFAULT   16 .debug_aranges
+    17: 00000000     0 SECTION LOCAL  DEFAULT   17 .debug_str
+    18: 00000000     0 SECTION LOCAL  DEFAULT   18 .debug_frame
+    19: 00000000     0 SECTION LOCAL  DEFAULT   19 .debug_rnglists
+    20: 00000000     0 FILE    LOCAL  DEFAULT  ABS boot.o
+    21: 20400000     0 NOTYPE  LOCAL  DEFAULT    1 $x
+    22: 20400000     0 NOTYPE  LOCAL  DEFAULT    1 _boot2_10
+    23: 20400036     0 NOTYPE  LOCAL  DEFAULT    1 _boot2_20
+    24: 20400020     0 NOTYPE  LOCAL  DEFAULT    1 _boot2_11
+    25: 2040005c     0 NOTYPE  LOCAL  DEFAULT    1 _boot3_10
+    26: 2040004e     0 NOTYPE  LOCAL  DEFAULT    1 _boot2_21
+    27: 00000000     0 FILE    LOCAL  DEFAULT  ABS exception_handlers.o
+    28: 204000c0     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    29: 204000f8    62 NOTYPE  LOCAL  DEFAULT    2 load_fault_handler
+    30: 204003a6    64 NOTYPE  LOCAL  DEFAULT    2 store_fault_handler
+    31: 20400724     0 NOTYPE  LOCAL  DEFAULT    2 ecall_handler
+    32: 20400806    32 NOTYPE  LOCAL  DEFAULT    2 illegal_instruction_handler
+    33: 204019d2     0 NOTYPE  LOCAL  DEFAULT    2 world_exception_handler
+    34: 20400328     0 NOTYPE  LOCAL  DEFAULT    2 user_claim_plic
+    35: 2040026c     0 NOTYPE  LOCAL  DEFAULT    2 user_pending_plic_load
+    36: 204001de     0 NOTYPE  LOCAL  DEFAULT    2 user_transparent_load
+    37: 20400136     0 NOTYPE  LOCAL  DEFAULT    2 user_mtimecmp_load
+    38: 20401550     0 NOTYPE  LOCAL  DEFAULT    2 mscratch_to_register_jump_table
+    39: 2040167c     0 NOTYPE  LOCAL  DEFAULT    2 return_from_trap_and_emul
+    40: 204006fa     0 NOTYPE  LOCAL  DEFAULT    2 user_complete_plic
+    41: 20400654     0 NOTYPE  LOCAL  DEFAULT    2 user_write_plic_enable
+    42: 204003e6     0 NOTYPE  LOCAL  DEFAULT    2 user_write_mtimer_cmp
+    43: 20400600     0 NOTYPE  LOCAL  DEFAULT    2 user_write_plic_priority
+    44: 204016d8     0 NOTYPE  LOCAL  DEFAULT    2 register_to_register_jump_table
+    45: 20400738     0 NOTYPE  LOCAL  DEFAULT    2 enter_secure_world
+    46: 2040077e     0 NOTYPE  LOCAL  DEFAULT    2 exit_secure_world
+    47: 204007a8    94 NOTYPE  LOCAL  DEFAULT    2 env_call_from_u_mode_handler
+    48: 20402292     0 NOTYPE  LOCAL  DEFAULT    2 context_switch
+    49: 204017f8     0 NOTYPE  LOCAL  DEFAULT    2 mret_from_user_mode
+    50: 20400826    52 NOTYPE  LOCAL  DEFAULT    2 system_instruction_handler
+    51: 2040085a     0 NOTYPE  LOCAL  DEFAULT    2 illegal_csrop_handler
+    52: 204010d8     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mie
+    53: 20400d4e     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mtvec
+    54: 20400ef8     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mepc
+    55: 20400d12     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mcause
+    56: 20400ebe     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mtval
+    57: 2040107c     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mhartid
+    58: 204010aa     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_misa
+    59: 20400924     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mstatus
+    60: 204013d0     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mip
+    61: 204008c4     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_mcycle
+    62: 204008f4     0 NOTYPE  LOCAL  DEFAULT    2 rwcs_minstret
+    63: 20400cee     0 NOTYPE  LOCAL  DEFAULT    2 end_emul
+    64: 20401650     0 NOTYPE  LOCAL  DEFAULT    2 mscratch_to_register_t0_temp
+    65: 20401666     0 NOTYPE  LOCAL  DEFAULT    2 mscratch_to_register_t1_temp
+    66: 204017d8     0 NOTYPE  LOCAL  DEFAULT    2 value_t0_temp_to_t0
+    67: 204017e8     0 NOTYPE  LOCAL  DEFAULT    2 value_t1_temp_to_t0
+    68: 204019be     0 NOTYPE  LOCAL  DEFAULT    2 mret_interrupts_disabled
+    69: 2040268a     0 NOTYPE  LOCAL  DEFAULT    2 exit_ctx_switch
+    70: 20401f8a     0 NOTYPE  LOCAL  DEFAULT    2 timer_interrupt_for_current_world
+    71: 20401b74     0 NOTYPE  LOCAL  DEFAULT    2 timer_interrupt_for_other_world
+    72: 20402292     0 NOTYPE  LOCAL  DEFAULT    2 timer_interrupt_for_disabled_interrupt_other_world
+    73: 20401fba     0 NOTYPE  LOCAL  DEFAULT    2 update_timer_management
+    74: 20402194     0 NOTYPE  LOCAL  DEFAULT    2 timer_interrupt_for_disabled_interrupt_current_world
+    75: 2040241c     0 NOTYPE  LOCAL  DEFAULT    2 switch_to_secure_world
+    76: 20402408     0 NOTYPE  LOCAL  DEFAULT    2 switch_from_secure_world
+    77: 204023d8     0 NOTYPE  LOCAL  DEFAULT    2 normal_scheduling
+    78: 204023f2     0 NOTYPE  LOCAL  DEFAULT    2 reset_world_count
+    79: 2040243c     0 NOTYPE  LOCAL  DEFAULT    2 exit_schedule
+    80: 2040266c     0 NOTYPE  LOCAL  DEFAULT    2 only_a6
+    81: 20402688     0 NOTYPE  LOCAL  DEFAULT    2 skip_assignment
+    82: 00000000     0 FILE    LOCAL  DEFAULT  ABS plic.c
+    83: 204026ac     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    84: 00000000     0 FILE    LOCAL  DEFAULT  ABS cpu_init.c
+    85: 2040283a     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    86: 00000000     0 FILE    LOCAL  DEFAULT  ABS systick.c
+    87: 20402904     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    88: 00000000     0 FILE    LOCAL  DEFAULT  ABS pmp.c
+    89: 20402a54     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    90: 00000000     0 FILE    LOCAL  DEFAULT  ABS init.c
+    91: 20402d56     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    92: 00000000     0 FILE    LOCAL  DEFAULT  ABS utango.c
+    93: 20402d6a     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    94: 00000000     0 FILE    LOCAL  DEFAULT  ABS worlds.c
+    95: 20402d84     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    96: 00000000     0 FILE    LOCAL  DEFAULT  ABS sys_timer.c
+    97: 20402ee4     0 NOTYPE  LOCAL  DEFAULT    2 $x
+    98: 00000000     0 FILE    LOCAL  DEFAULT  ABS mem.c
+    99: 20402f1a     0 NOTYPE  LOCAL  DEFAULT    2 $x
+   100: 00000000     0 FILE    LOCAL  DEFAULT  ABS dev.c
+   101: 00000000     0 FILE    LOCAL  DEFAULT  ABS utils_io.c
+   102: 00000000     0 FILE    LOCAL  DEFAULT  ABS platform_config.c
+   103: 00000000     0 FILE    LOCAL  DEFAULT  ABS config.c
+   104: 20410000     0 NOTYPE  LOCAL  DEFAULT    7 $d
+   105: 204129ac     0 NOTYPE  LOCAL  DEFAULT    7 _world1_end
+   106: 20480000     0 NOTYPE  LOCAL  DEFAULT    8 $d
+   107: 204b9490     0 NOTYPE  LOCAL  DEFAULT    8 _world2_end
+   108: 80000000    64 OBJECT  LOCAL  DEFAULT    3 __compound_literal.0
+   109: 80000160     8 OBJECT  LOCAL  DEFAULT    4 __compound_literal.1
+   110: 80000168     4 OBJECT  LOCAL  DEFAULT    4 __compound_literal.2
+   111: 80000040    48 OBJECT  LOCAL  DEFAULT    3 __compound_literal.3
+   112: 8000016c     4 OBJECT  LOCAL  DEFAULT    4 __compound_literal.4
+   113: 80000170     4 OBJECT  LOCAL  DEFAULT    4 __compound_literal.5
+   114: 20400000     0 FUNC    GLOBAL DEFAULT    1 reset_handler
+   115: 00000c00     0 NOTYPE  GLOBAL DEFAULT  ABS __HEAP_SIZE
+   116: 20402ee4    20 FUNC    GLOBAL DEFAULT    2 system_timer_init
+   117: 20480000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_BASE_W2
+   118: 20400000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_BASE
+   119: 80000800     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_BASE_W1
+   120: 20403112   120 FUNC    GLOBAL DEFAULT    2 memory_check_overlapps
+   121: 800004a4   256 OBJECT  GLOBAL DEFAULT    5 memory_list
+   122: 80000600     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_BASE_W4
+   123: 80003c00     0 NOTYPE  GLOBAL DEFAULT    9 __stack_lim
+   124: 204028b0    36 FUNC    GLOBAL DEFAULT    2 arch_cpu_init
+   125: 80000178   784 OBJECT  GLOBAL DEFAULT    5 WCB
+   126: 800005a8     8 OBJECT  GLOBAL DEFAULT    6 TimerIncrement
+   127: 20402f1a   504 FUNC    GLOBAL DEFAULT    2 memory_list_init
+   128: 204000c0     0 NOTYPE  GLOBAL DEFAULT    2 __text_start
+   129: 204000c0     0 NOTYPE  GLOBAL DEFAULT    1 __text_lma
+   130: 20480000     0 NOTYPE  GLOBAL DEFAULT    8 _world2_start
+   131: 20488000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_BASE_W4
+   132: 20401ae0  1970 FUNC    GLOBAL DEFAULT    2 systick_handler
+   133: 20401a60   114 FUNC    GLOBAL DEFAULT    2 mei_handler
+   134: 80000140     0 OBJECT  GLOBAL DEFAULT    3 timer_incr
+   135: 2040283a   118 FUNC    GLOBAL DEFAULT    2 arch_cpu_ctx_init
+   136: 80000178     0 NOTYPE  GLOBAL DEFAULT    5 __bss_start__
+   137: 80000100     0 OBJECT  GLOBAL DEFAULT    3 secure_call
+   138: 80000150     0 OBJECT  GLOBAL DEFAULT    3 perf_cont
+   139: 20484000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_BASE_W3
+   140: 20401a50     2 FUNC    GLOBAL DEFAULT    2 msi_handler
+   141: 80000120     0 OBJECT  GLOBAL DEFAULT    3 exit_secure_world_request
+   142: 20402f0c    14 FUNC    GLOBAL DEFAULT    2 system_timer_disable
+   143: 00004000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_SIZE_W4
+   144: 00002800     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_SIZE_W2
+   145: 80000488     4 OBJECT  GLOBAL DEFAULT    5 rworld_ctx_ptr
+   146: 800000c0     0 OBJECT  GLOBAL DEFAULT    3 register_ctx
+   147: 80004000     0 NOTYPE  GLOBAL DEFAULT    9 __stack_top
+   148: 204026ac   398 FUNC    GLOBAL DEFAULT    2 arch_irqs_ctx_init
+   149: 800005a4     0 NOTYPE  GLOBAL DEFAULT    5 __bss_end__
+   150: 00000400     0 NOTYPE  GLOBAL DEFAULT  ABS __STACK_SIZE
+   151: 20000000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_SIZE
+   152: 20402904    66 FUNC    GLOBAL DEFAULT    2 systick_init
+   153: 80000174     0 NOTYPE  GLOBAL DEFAULT    4 __data_end
+   154: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_SIZE_W3
+   155: 20402daa   300 FUNC    GLOBAL DEFAULT    2 worlds_tcbs_init
+   156: 20402aec   270 FUNC    GLOBAL DEFAULT    2 arch_mem_unit_ctx_init
+   157: 20402d84    38 FUNC    GLOBAL DEFAULT    2 worlds_init
+   158: 80000110     0 OBJECT  GLOBAL DEFAULT    3 secure_cmd
+   159: 800000e0     0 OBJECT  GLOBAL DEFAULT    3 next_mtimer_interrupt_is_world
+   160: 20402d56    20 FUNC    GLOBAL DEFAULT    2 init
+   161: 000029ac     0 NOTYPE  GLOBAL DEFAULT  ABS _world1_size
+   162: 20402ef8    20 FUNC    GLOBAL DEFAULT    2 system_timer_enable
+   163: 00004000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_SIZE_W1
+   164: 00000040     0 NOTYPE  GLOBAL DEFAULT  ABS __vtb_size
+   165: 204031e4     0 NOTYPE  GLOBAL DEFAULT    2 __text_end
+   166: 20400080    64 NOTYPE  GLOBAL DEFAULT    1 _utango_vtb
+   167: 20402946   270 FUNC    GLOBAL DEFAULT    2 systick_enable
+   168: 00000c00     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_SIZE_W1
+   169: 00040000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_SIZE_W2
+   170: 8000048c    24 OBJECT  GLOBAL DEFAULT    5 mtimecmp_list
+   171: 80000070    72 OBJECT  GLOBAL DEFAULT    3 worlds_cfg
+   172: 204028d4    48 FUNC    GLOBAL DEFAULT    2 arch_cpu_kickoff
+   173: 00039490     0 NOTYPE  GLOBAL DEFAULT  ABS _world2_size
+   174: 80000000     0 NOTYPE  GLOBAL DEFAULT  ABS __DTCM_BASE
+   175: 80000130     0 OBJECT  GLOBAL DEFAULT    3 next_mtime_cmp
+   176: 20402d6a    26 FUNC    GLOBAL DEFAULT    2 utango_start
+   177: 2040318a    24 FUNC    GLOBAL DEFAULT    2 memory_init
+   178: 20402a54   152 FUNC    GLOBAL DEFAULT    2 arch_mem_unit_set
+   179: 800000f0     0 OBJECT  GLOBAL DEFAULT    3 secure_world_request
+   180: 00004000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_SIZE_W3
+   181: 20410000     0 NOTYPE  GLOBAL DEFAULT    7 _world1_start
+   182: 20402bfa   348 FUNC    GLOBAL DEFAULT    2 arch_set_PMP_region
+   183: 80000000     0 NOTYPE  GLOBAL DEFAULT    3 __data_start
+   184: 80001400     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_BASE_W2
+   185: 80000800     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_BASE_W3
+   186: 204031e4     0 NOTYPE  GLOBAL DEFAULT  ABS __data_vma_start
+   187: 204000c0    56 FUNC    GLOBAL DEFAULT    2 exception_handler
+   188: 20402ed6    14 FUNC    GLOBAL DEFAULT    2 worlds_arch_init
+   189: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS __RAM_SIZE_W4
+   190: 204000c0     0 NOTYPE  GLOBAL DEFAULT    1 __vtb_end
+   191: 20410000     0 NOTYPE  GLOBAL DEFAULT  ABS __FLASH_BASE_W1
+   192: 00004000     0 NOTYPE  GLOBAL DEFAULT  ABS __DTCM_SIZE
+
+No version information found in this file.
+Attribute Section: riscv
+File Attributes
+  Tag_RISCV_stack_align: 16-bytes
+  Tag_RISCV_arch: "rv32i2p0_m2p0_c2p0"
+  Tag_RISCV_priv_spec: 1
+  Tag_RISCV_priv_spec_minor: 11
