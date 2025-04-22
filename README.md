@@ -1,6 +1,3 @@
-# u-Tango
-
-uTango, is a Multi-World TEE for Resource-constrained IoT Devices.
 
 ## Prerequisites
 
